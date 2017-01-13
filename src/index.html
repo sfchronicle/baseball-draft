@@ -23,11 +23,7 @@
 
       <div class="button-container">
         <% csv.BallotData.forEach(function(writer,idx){ %>
-          <% if (idx == 0) { %>
-            <div class="button selected" id="button<%=writer.id%>"><%=writer.name%></div>
-          <% } else { %>
-            <div class="button" id="button<%=writer.id%>"><%=writer.name%></div>
-          <% } %>
+          <div class="button" id="button<%=writer.id%>"><%=writer.name%></div>
         <% }) %>
       </div>
 
@@ -40,8 +36,8 @@
       </div>
 
       <div class="credit">
-        <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
         <div class="entry">Lucio Villa  &bull; <a href="mailto:lvilla@sfchronicle.com">lvilla@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/luciovilla" target="_blank">@luciovilla</a></div>
+        <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
       </div>
 
 
