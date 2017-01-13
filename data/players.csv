@@ -1,16 +1,16 @@
-players,photo
-Jeff Bagwell,12182752
-Barry Bonds,12182746
-Roger Clemens,12182756
-Vladimir Guerrero,12182744
-Trevor Hoffman,12182753
-Jeff Kent,12182748
-Edgar Martinez,12182747
-Mike Mussina,12182755
-Tim Raines,12182749
-Manny Ramirez,12182745
-Ivan Rodriguez,12182754
-Curt Schilling,12182757
-Gary Sheffield,12182739
-Lee Smith,12182743
-Sammy Sosa,12182758
+slug,name,photo
+bagwell,Jeff Bagwell,12182752
+bonds,Barry Bonds,12182746
+clemens,Roger Clemens,12182756
+guerrero,Vladimir Guerrero,12182744
+hoffman,Trevor Hoffman,12182753
+kent,Jeff Kent,12182748
+martinez,Edgar Martinez,12182747
+mussina,Mike Mussina,12182755
+raines,Tim Raines,12182749
+ramirez,Manny Ramirez,12182745
+rodriguez,Ivan Rodriguez,12182754
+schilling,Curt Schilling,12182757
+sheffield,Gary Sheffield,12182739
+smith,Lee Smith,12182743
+sosa,Sammy Sosa,12182758
