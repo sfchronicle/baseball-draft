@@ -16,14 +16,23 @@
 
   <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
 
-    <%= t.include("partials/_nav.html") %>
+    <div class="outer">
+
+      <div class="hed">Chronicle baseball experts vote for the Hall of Fame</div>
+      <div class="chatter">We have some great baseball experts on staff at the San Francisco Chronicle. See for whom they would vote for the Baseball Hall of Fame and why.</div>
+
+      <div class="button-container">
+        <% csv.BallotData.forEach(function(writer,idx){ %>
+          <% if (idx == 0) { %>
+            <div class="button selected" id="button<%=writer.slug%>"><%=writer.name%></div>
+          <% } else { %>
+            <div class="button" id="button<%=writer.slug%>"><%=writer.name%></div>
+          <% } %>
+        <% }) %>
+      </div>
 
 
-    <div class="container">
-      <p>Content goes here...</p>
     </div>
-
-    <%= t.include("partials/_footer.html") %>
 
     <script src="app.js" async></script>
     <%= t.include("partials/_helloSFC.html") %>
