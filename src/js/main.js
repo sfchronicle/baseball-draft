@@ -1,18 +1,25 @@
 require("./lib/social"); //Do not delete
 
-["slusser","schulman","shea","killion","jenkins","kroichick"].forEach(function(writer){
+["slusser","schulman","shea","killion","jenkins","kroichick"].forEach(function(writer, wdx){
   // set up clicking to update map interactive on mobile
   document.getElementById("button"+writer).addEventListener("click", function() {
-    console.log(writer);
-    console.log(ballots);
-    console.log(ballots[writer]);
-    // var sectionElements = document.getElementsByClassName("section");
+
+    // activating the correct button
     var buttonElements = document.getElementsByClassName("button");
     for(var i = 0; i < buttonElements.length; i++){
-      // sectionElements[i].className = "section";
       buttonElements[i].className = "button";
     };
-    // document.getElementById("section"+section).className += " selected";
     document.getElementById("button"+writer).className += " selected";
+
+    // highlighting the appropriate players
+    var cards = document.getElementsByClassName("card");
+    for (var i=0; i<cards.length; i++) {
+      if (ballots[wdx][cards[i].getAttribute("id")] == "x") {
+        cards[i].className = "card active";
+      } else {
+        cards[i].className = "card";
+      }
+    }
+
   });
 });
