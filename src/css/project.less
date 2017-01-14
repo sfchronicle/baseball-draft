@@ -1,5 +1,12 @@
-@yellow: #FFCC32;
+@nav-link: #FFCC32;
 
+.hed{
+  font-size:1.5em;
+}
+
+.chatter{
+  max-width:560px;
+}
 .outer {
   font-family: @block-graphics;
   font-size: 16px;
@@ -10,17 +17,37 @@
   .flex-wrap(wrap);
 }
 
-.card {
-  flex: 0 0 32%;
+.card, .novote, .list{
+  flex: 0 0 18%;
   text-align: center;
+
   &.active {
     font-family: @bold-graphics;
+    padding:10px;
+    background: #cac3ac;
+    margin: 1%;
+    .img{
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 29px;
+    border: 2px solid #000;
+    }
+  }
+}
+
+.card{
+  display:none;
+
+  &.active{
+  display:block;
   }
 }
 
 .credit {
   padding-top: 20px;
 }
+
 
 .button-container {
   margin: auto;
@@ -37,17 +64,21 @@
     padding: 2px 10px;
     margin: 4px;
     float: center;
-    color: darken(@yellow,15%);
+    color: darken(@nav-link,15%);
     // border-radius: 6px;
-    border-bottom: darken(@yellow,15%) 1px solid;
+    border-bottom: darken(@nav-link,15%) 1px solid;
     margin-right: 10px;
     &.selected {
       color: white;
-      background: darken(@yellow,15%);
+      background: darken(@nav-link,15%);
     }
     &:hover {
       color: white;
-      background: darken(@yellow,15%);
+      background: darken(@nav-link,15%);
     }
   }
+}
+
+#pick{
+  display:none;
 }

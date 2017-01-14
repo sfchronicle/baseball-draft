@@ -27,12 +27,31 @@
         <% }) %>
       </div>
 
+      <div id="list" class="card-wrapper">
+      <% csv.players.forEach(function(player,idx){ %>
+        <div class="list">
+          <div class="name"><%=player.name%></div>
+        </div>
+      <% }); %>
+      </div>
+
+      <div id="pick">
       <div class="card-wrapper">
         <% csv.players.forEach(function(player,idx){ %>
-          <div class="card" id="<%=player.slug%>">
-            <div class="name"><%=player.name%></div>
-          </div>
+          <% if (player.slug) { %>
+            <div class="card" id="<%=player.slug%>">
+              <div class="img" style="background-image: url('http://ww4.hdnux.com/photos/51/64/54/<%=player.photo%>/8/300x0.jpg');">
+                
+              </div>
+              <div class="name"><%=player.name%></div>
+            </div>
+          
+          <% } else { %>
+
+        <% } %>
+
         <% }); %>
+        </div>
       </div>
 
       <div class="credit">
