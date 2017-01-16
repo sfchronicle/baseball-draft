@@ -18,9 +18,7 @@
 
     <div class="outer">
 
-      <div class="hed">Chronicle baseball experts vote for the Hall of Fame</div>
-      <div class="chatter">We have some great baseball experts on staff at the San Francisco Chronicle. See for whom they would vote for the Baseball Hall of Fame and why.</div>
-
+      <div class="hed">The Chronicle has six writers who vote in baseball’s Hall of Fame election. Click on their names below to see their ballots. The 2017 class will be announced Wednesday.</div>
       <div class="button-container">
         <% csv.BallotData.forEach(function(writer,idx){ %>
           <div class="button" id="button<%=writer.id%>"><%=writer.name%></div>
@@ -30,13 +28,17 @@
       <div id="list" class="card-wrapper">
       <% csv.players.forEach(function(player,idx){ %>
         <div class="list">
-          <div class="name"><%=player.name%></div>
+          <div class=""><%=player.name%></div>
         </div>
       <% }); %>
       </div>
 
       <div id="pick">
       <div class="card-wrapper">
+        <% csv.BallotData.forEach(function(reporter){ %>
+          <div id="<%=reporter.id%>" class="explanation"><%=reporter.Explanation%></div>
+        <% }); %>
+
         <% csv.players.forEach(function(player,idx){ %>
           <% if (player.slug) { %>
             <div class="card" id="<%=player.slug%>">

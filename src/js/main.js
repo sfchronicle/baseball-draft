@@ -13,10 +13,12 @@ require("./lib/social"); //Do not delete
     for(var i = 0; i < buttonElements.length; i++){
       buttonElements[i].className = "button";
     };
+
     document.getElementById("button"+writer).className += " selected";
 
     // highlighting the appropriate players
     var cards = document.getElementsByClassName("card");
+    var explanations = document.getElementsByClassName('explanation');
     
     for (var i=0; i<cards.length; i++) {
       if (ballots[wdx][cards[i].getAttribute("id")] == "x") {
@@ -25,6 +27,18 @@ require("./lib/social"); //Do not delete
         cards[i].className = "card";
       }
     }
+
+    for (var e=0; e<explanations.length; e++) {
+      if (explanations[e].getAttribute("class") == "explanation") {
+        explanations[e].className = "explanation hide";
+      } else {
+        explanations[e].className = "explanation";
+        console.log('show this one');
+      }
+    }
+
+
+
 
   });
 });
